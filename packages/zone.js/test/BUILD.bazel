@@ -120,6 +120,8 @@ jasmine_node_test(
     bootstrap = [
         "angular/packages/zone.js/test/node_entry_point.js",
     ],
+    # This test is flaky on the CircleCI Windows setup.
+    tags = ["fixme-windows"],
     deps = [
         ":test_node_lib",
     ],
